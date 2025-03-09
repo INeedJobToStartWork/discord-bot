@@ -33,5 +33,6 @@ export default ineedj({
 	"@EslintNode/no-process-env",
 	"@EslintNode/no-process-exit",
 	"@EslintUnicorn/no-process-exit",
-	"@EslintNode/hashbang"
+	"@EslintNode/hashbang",
+	"@EslintPromise/always-return"
 );

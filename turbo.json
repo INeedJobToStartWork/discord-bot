@@ -56,7 +56,7 @@
       "dependsOn": ["build:dev"],
       "cache": false
     },
-    "start": {
+    "start:prod": {
       "dependsOn": ["build"],
       "cache": false
     },

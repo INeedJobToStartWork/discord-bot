@@ -28,7 +28,7 @@
     "build:npm": "turbo build:npm",
     "------------------------DEPLOYS------------------------": "",
     "start:dev": "turbo start:dev",
-    "start": "turbo start",
+    "start:prod": "turbo start:prod",
     "npm:prepack": "turbo npm:prepack",
     "npm:postpack": "turbo npm:postpack",
     "npm:version": "changeset version",
