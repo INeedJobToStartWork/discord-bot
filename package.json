@@ -1,0 +1,56 @@
+{
+  "name": "@monorepo/discord-bot",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "------------------------INSTALLATION------------------------": "",
+    "preinstall": "husky init",
+    "prepare": "husky",
+    "pre": "turbo pre",
+    "pre:husky": "git add . && lint-staged",
+    "------------------------UTILS------------------------": "",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "lint:next": "turbo lint:next",
+    "lint:test": "turbo lint:test",
+    "format": "turbo format",
+    "clean": "turbo clean",
+    "link-cli": "turbo link-cli",
+    "link-cli:dev": "turbo link-cli",
+    "unlink-cli:dev": "turbo link-cli",
+    "------------------------BUILDS------------------------": "",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "build:dev": "turbo build:dev",
+    "build:prod": "turbo build:prod",
+    "build:npm": "turbo build:npm",
+    "------------------------DEPLOYS------------------------": "",
+    "start:dev": "turbo start:dev",
+    "start": "turbo start",
+    "npm:prepack": "turbo npm:prepack",
+    "npm:postpack": "turbo npm:postpack",
+    "npm:version": "changeset version",
+    "npm:publish": "changeset publish",
+    "------------------------TESTS------------------------": "",
+    "test": "echo \"Error: no test specified\""
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.28.1",
+    "@types/lint-staged": "~13.3.0",
+    "@types/node": "^22.13.9",
+    "commitsmile": "^1.0.3",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "lint-staged": {
+    "*": ""
+  },
+  "packageManager": "pnpm@9.4.0"
+}
