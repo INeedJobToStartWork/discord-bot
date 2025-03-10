@@ -10,6 +10,7 @@ declare global {
 	namespace NodeJS {
 		export interface ProcessEnv {
 			CLIENT_ID: string;
+			DEV?: string;
 			GUILD_ID?: string;
 			TOKEN: string;
 		}
@@ -26,4 +27,4 @@ const envVariables = process.env;
 if (!is<NodeJS.ProcessEnv>(envVariables)) throw new Error("Invalid env variables");
 
 export default envVariables;
-export const { TOKEN, TZ, CLIENT_ID, GUILD_ID, ...restEnv } = envVariables;
+export const { TOKEN, TZ, CLIENT_ID, GUILD_ID, DEV, ...restEnv } = envVariables;
