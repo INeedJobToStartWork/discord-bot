@@ -1,6 +1,6 @@
 import { REST } from "discord.js";
 import { Routes } from "discord-api-types/v10";
-import { CLIENT_ID, DEV, GUILD_ID, TOKEN } from "@/utils";
+import { CLIENT_ID, NODE_ENV, GUILD_ID, TOKEN } from "@/utils";
 import * as commands from "@/commands";
 
 //----------------------
@@ -10,7 +10,7 @@ import * as commands from "@/commands";
 const rest = new REST().setToken(TOKEN);
 
 const ApiPath =
-	DEV === "true" && GUILD_ID
+	NODE_ENV === "development" && GUILD_ID
 		? Routes.applicationCommands(CLIENT_ID)
 		: Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID!);
 

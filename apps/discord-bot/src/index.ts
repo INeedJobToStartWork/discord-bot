@@ -1,5 +1,5 @@
 import { Client } from "discord.js";
-import { TOKEN } from "@/utils/envVariables";
+import { NODE_ENV, TOKEN } from "@/utils/envVariables";
 
 import type { SlashCommandDcBuilder } from "./utils";
 import type { IMyErrorAPI, TMyErrorList } from "oh-my-error";
@@ -50,6 +50,8 @@ client.on("ready", () => {
 //--------------------------------
 // Command Interaction Handler
 //--------------------------------
+
+console.log(NODE_ENV);
 
 void client.on("interactionCreate", interaction => {
 	if (!interaction.isCommand()) return;

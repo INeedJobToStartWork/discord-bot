@@ -25,8 +25,8 @@
 		"------------------------DEPLOYS------------------------": "",
 		"commands:dev": "node lib/scripts/registerCommands.js",
 		"commands:prod": "node dist/scripts/registerCommands.js",
-		"start:prod": "node dist/index.js",
-		"start:dev": "node lib/index.js",
+		"start:prod": "set NODE_ENV=production && node dist/index.js",
+		"start:dev": "set NODE_ENV=development && node lib/index.js",
 		"------------------------TESTS------------------------": "",
 		"test": "echo \"Error: no test specified\""
 	},
