@@ -24,7 +24,7 @@
 		"build:prod": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts",
 		"------------------------DEPLOYS------------------------": "",
 		"commands:dev": "node lib/scripts/register-commands.js",
-		"commands:prod": "node dist/index.js",
+		"commands:prod": "node dist/scripts/register-commands.js",
 		"start:prod": "node dist/index.js",
 		"start:dev": "node lib/index.js",
 		"------------------------TESTS------------------------": "",
