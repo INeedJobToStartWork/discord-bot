@@ -1,9 +1,10 @@
-import { Client } from "discord.js";
+import { Client, GatewayIntentBits, Partials } from "discord.js";
 import { TOKEN } from "@/utils/envVariables";
-import * as commands from "@/commands";
+
 import type { SlashCommandDcBuilder } from "./utils";
 import type { IMyErrorAPI, TMyErrorList } from "oh-my-error";
 import { exit } from "node:process";
+import * as commands from "@/commands";
 
 //--------------------------------
 // MyError
@@ -22,7 +23,19 @@ const MyErrorList = {
 //--------------------------------
 // App Setup
 //--------------------------------
-const client = new Client({ intents: [] });
+export const client = new Client({
+	partials: [
+		Partials.Channel, // for text channel
+		Partials.GuildMember, // for guild member
+		Partials.User // for discord user
+	],
+	intents: [
+		GatewayIntentBits.Guilds, // for guild related things
+		GatewayIntentBits.GuildMembers, // for guild members related things
+		GatewayIntentBits.GuildIntegrations, // for discord Integrations
+		GatewayIntentBits.GuildVoiceStates // for voice related things
+	]
+});
 
 void client.login(TOKEN).catch(() => {
 	console.error(MyErrorList.WRONG_TOKEN);
@@ -36,6 +49,7 @@ client.on("ready", () => {
 //--------------------------------
 // Command Interaction Handler
 //--------------------------------
+
 void client.on("interactionCreate", interaction => {
 	if (!interaction.isCommand()) return;
 

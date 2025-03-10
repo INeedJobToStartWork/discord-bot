@@ -1,9 +1,8 @@
-import { copy } from "esbuild-plugin-copy";
 import { defineConfig } from "tsup";
 import typiaPlug from "@ryoppippi/unplugin-typia/esbuild";
 
 export default defineConfig({
-	entry: ["src/index.ts", "src/scripts/register-commands.ts"],
+	entry: ["src/index.ts", "src/scripts/registerCommands.ts"],
 	target: "esnext",
 	clean: false,
 	format: ["esm"],
