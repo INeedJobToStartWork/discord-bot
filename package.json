@@ -33,6 +33,8 @@
     "npm:postpack": "turbo npm:postpack",
     "npm:version": "changeset version",
     "npm:publish": "changeset publish",
+    "commands:dev": "turbo commands:dev",
+    "commands:prod": "turbo commands:prod",
     "------------------------TESTS------------------------": "",
     "test": "echo \"Error: no test specified\""
   },

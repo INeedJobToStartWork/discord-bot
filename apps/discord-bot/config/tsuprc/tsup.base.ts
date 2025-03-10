@@ -3,11 +3,11 @@ import { defineConfig } from "tsup";
 import typiaPlug from "@ryoppippi/unplugin-typia/esbuild";
 
 export default defineConfig({
-	entry: ["src/index.ts"],
+	entry: ["src/index.ts", "src/scripts/register-commands.ts"],
 	target: "esnext",
 	clean: false,
 	format: ["esm"],
-
+	noExternal: ["discord-api-types", "oh-my-error"],
 	esbuildPlugins: [
 		typiaPlug({ tsconfig: "./tsconfig.json", cache: false })
 		// copy({

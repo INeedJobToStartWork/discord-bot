@@ -23,6 +23,8 @@
 		"build:dev": "pnpm tsup --config ./config/tsuprc/tsup.dev.ts",
 		"build:prod": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts",
 		"------------------------DEPLOYS------------------------": "",
+		"commands:dev": "node lib/scripts/register-commands.js",
+		"commands:prod": "node dist/index.js",
 		"start:prod": "node dist/index.js",
 		"start:dev": "node lib/index.js",
 		"------------------------TESTS------------------------": "",
@@ -37,10 +39,13 @@
 		]
 	},
 	"dependencies": {
+		"@discordjs/builders": "^1.10.1",
+		"@discordjs/rest": "^2.4.3",
 		"commander": "^12.1.0",
+		"discord-api-types": "^0.37.119",
 		"discord.js": "^14.18.0",
 		"dotenv": "^16.4.7",
-		"oh-my-error": "^2.0.1",
+		"oh-my-error": "2.0.1",
 		"typia": "6.12.2"
 	},
 	"devDependencies": {
@@ -48,15 +53,15 @@
 		"@ineedj/prettierrc": "^2.0.0",
 		"@ineedj/tsconfig": "^1.0.0",
 		"@ryoppippi/unplugin-typia": "1.0.7",
-		"@types/node": "^22.10.2",
-		"esbuild": "^0.24.0",
+		"@types/node": "^22.13.10",
+		"esbuild": "^0.24.2",
 		"esbuild-plugin-copy": "^2.1.1",
 		"eslint": "^8.57.1",
-		"lint-staged": "^15.2.11",
-		"prettier": "^3.4.2",
+		"lint-staged": "^15.4.3",
+		"prettier": "^3.5.3",
 		"ts-patch": "^3.3.0",
-		"tsup": "^8.3.5",
-		"typescript": "^5.6.3"
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.2"
 	},
 	"packageManager": "pnpm@9.14.2",
 	"engines": {

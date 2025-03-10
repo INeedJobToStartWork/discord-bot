@@ -83,8 +83,13 @@
       "cache": false
     },
     "unlink-cli:dev": {
-     "cache": false
+      "cache": false
+    },
+    "commands:dev": {
+      "cache": false
+    },
+    "commands:prod": {
+      "cache": false
     }
-    
   }
 }
