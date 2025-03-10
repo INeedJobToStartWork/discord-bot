@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits, Partials } from "discord.js";
+import { Client } from "discord.js";
 import { TOKEN } from "@/utils/envVariables";
 
 import type { SlashCommandDcBuilder } from "./utils";
@@ -24,17 +24,18 @@ const MyErrorList = {
 // App Setup
 //--------------------------------
 export const client = new Client({
-	partials: [
-		Partials.Channel, // for text channel
-		Partials.GuildMember, // for guild member
-		Partials.User // for discord user
-	],
-	intents: [
-		GatewayIntentBits.Guilds, // for guild related things
-		GatewayIntentBits.GuildMembers, // for guild members related things
-		GatewayIntentBits.GuildIntegrations, // for discord Integrations
-		GatewayIntentBits.GuildVoiceStates // for voice related things
-	]
+	intents: []
+	// partials: [
+	// 	Partials.Channel, // for text channel
+	// 	Partials.GuildMember, // for guild member
+	// 	Partials.User // for discord user
+	// ],
+	// intents: [
+	// 	GatewayIntentBits.Guilds, // for guild related things
+	// 	GatewayIntentBits.GuildMembers, // for guild members related things
+	// 	GatewayIntentBits.GuildIntegrations, // for discord Integrations
+	// 	GatewayIntentBits.GuildVoiceStates // for voice related things
+	// ]
 });
 
 void client.login(TOKEN).catch(() => {
