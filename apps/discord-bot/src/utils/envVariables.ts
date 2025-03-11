@@ -11,9 +11,8 @@ declare global {
 		export interface ProcessEnv {
 			CLIENT_ID: string;
 			GUILD_ID?: string;
-			MAX_LOG_FILE_SIZE: string;
-			NODE_ENV?: string;
-			// "development" | "production"
+			MAX_LOG_FILE_SIZE?: string;
+			NODE_ENV?: string; // "development" | "production"
 			TOKEN: string;
 		}
 	}
