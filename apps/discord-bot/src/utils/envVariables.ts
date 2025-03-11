@@ -11,7 +11,9 @@ declare global {
 		export interface ProcessEnv {
 			CLIENT_ID: string;
 			GUILD_ID?: string;
-			NODE_ENV?: string; // "development" | "production"
+			MAX_LOG_FILE_SIZE: string;
+			NODE_ENV?: string;
+			// "development" | "production"
 			TOKEN: string;
 		}
 	}
@@ -27,4 +29,4 @@ const envVariables = process.env;
 if (!is<NodeJS.ProcessEnv>(envVariables)) throw new Error("Invalid env variables");
 
 export default envVariables;
-export const { TOKEN, TZ, CLIENT_ID, GUILD_ID, NODE_ENV, ...restEnv } = envVariables;
+export const { TOKEN, TZ, CLIENT_ID, GUILD_ID, NODE_ENV, MAX_LOG_FILE_SIZE, ...restEnv } = envVariables;

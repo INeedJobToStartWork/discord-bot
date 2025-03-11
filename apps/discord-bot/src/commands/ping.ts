@@ -4,10 +4,10 @@ import { SlashCommandDcBuilder } from "@/utils";
 // Functions
 //----------------------
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 export const ping = new SlashCommandDcBuilder()
 	.setName("ping")
 	.setDescription("Replies with Pong!")
-	// eslint-disable-next-line @typescript-eslint/no-misused-promises
 	.setExecute(async interaction => {
 		const startTime = Date.now();
 		await interaction.reply({ content: "Pinging...", ephemeral: true });

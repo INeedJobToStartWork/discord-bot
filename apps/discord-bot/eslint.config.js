@@ -34,5 +34,6 @@ export default ineedj({
 	"@EslintNode/no-process-exit",
 	"@EslintUnicorn/no-process-exit",
 	"@EslintNode/hashbang",
-	"@EslintPromise/always-return"
+	"@EslintPromise/always-return",
+	"@EslintUnicorn/number-literal-case"
 );

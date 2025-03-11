@@ -1,7 +1,7 @@
 import { Client } from "discord.js";
-import { NODE_ENV, TOKEN } from "@/utils/envVariables";
-
-import type { SlashCommandDcBuilder } from "./utils";
+import { TOKEN } from "@/utils/envVariables";
+import { logger } from "@/utils";
+import type { SlashCommandDcBuilder } from "@/utils";
 import type { IMyErrorAPI, TMyErrorList } from "oh-my-error";
 import { exit } from "node:process";
 import * as commands from "@/commands";
@@ -23,35 +23,27 @@ const MyErrorList = {
 //--------------------------------
 // App Setup
 //--------------------------------
+
 export const client = new Client({
 	intents: []
-	// partials: [
-	// 	Partials.Channel, // for text channel
-	// 	Partials.GuildMember, // for guild member
-	// 	Partials.User // for discord user
-	// ],
-	// intents: [
-	// 	GatewayIntentBits.Guilds, // for guild related things
-	// 	GatewayIntentBits.GuildMembers, // for guild members related things
-	// 	GatewayIntentBits.GuildIntegrations, // for discord Integrations
-	// 	GatewayIntentBits.GuildVoiceStates // for voice related things
-	// ]
 });
+const logg = logger.child({ context: "Setup" });
 
 void client.login(TOKEN).catch(() => {
-	console.error(MyErrorList.WRONG_TOKEN);
+	logg.log("emergency", MyErrorList.WRONG_TOKEN);
 	exit(1);
 });
 
 client.on("ready", () => {
-	console.log("Ready!");
+	logg.info(`🎉 Logged in as ${client.user?.tag ?? "unknown user"}`);
+	logg.info(`🏰 Serving ${client.guilds.cache.size.toLocaleString()} guilds`);
+	logg.info(`👀 Watching ${client.channels.cache.size.toLocaleString()} channels`);
+	logg.info(`👥 Ready to serve ${client.users.cache.size.toLocaleString()} users`);
 });
 
 //--------------------------------
 // Command Interaction Handler
 //--------------------------------
-
-console.log(NODE_ENV);
 
 void client.on("interactionCreate", interaction => {
 	if (!interaction.isCommand()) return;
@@ -60,4 +52,5 @@ void client.on("interactionCreate", interaction => {
 
 	const command = (commands as Record<string, SlashCommandDcBuilder>)[commandName] as SlashCommandDcBuilder | undefined;
 	if (command) command.execute(interaction);
+	logger.info(`${command?.name} executed!`, { context: "Command", details: interaction }); // TODO: Too heavy, change that details
 });

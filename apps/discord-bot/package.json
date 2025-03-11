@@ -14,7 +14,7 @@
 	"main": "index.js",
 	"scripts": {
 		"------------------------INSTALLATION------------------------": "",
-		"prepare": "ts-patch install && typia patch",
+		"prepare": "",
 		"------------------------UTILS------------------------": "",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
@@ -39,19 +39,12 @@
 		]
 	},
 	"dependencies": {
-		"@discordjs/builders": "^1.10.1",
-		"@discordjs/collection": "^2.1.1",
-		"@discordjs/formatters": "^0.6.0",
-		"@discordjs/rest": "^2.4.3",
-		"@discordjs/util": "^1.1.1",
-		"@discordjs/voice": "^0.18.0",
-		"@discordjs/ws": "^2.0.1",
-		"@sapphire/snowflake": "^3.5.5",
-		"discord-api-types": "^0.37.119",
 		"discord.js": "^14.18.0",
 		"dotenv": "^16.4.7",
 		"oh-my-error": "2.0.1",
-		"typia": "6.12.2"
+		"typia": "6.12.2",
+		"winston": "^3.17.0",
+		"winston-daily-rotate-file": "^5.0.0"
 	},
 	"devDependencies": {
 		"@ineedj/eslintrc": "^1.2.3",
@@ -68,7 +61,7 @@
 		"tsup": "^8.4.0",
 		"typescript": "^5.8.2"
 	},
-	"packageManager": "pnpm@9.14.2",
+	"packageManager": "pnpm@10.6.2",
 	"engines": {
 		"node": ">=20"
 	}

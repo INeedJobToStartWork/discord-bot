@@ -1,0 +1,115 @@
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fc334daec6e02343bac7efe24ebd1950e7783588
+--- /dev/null
++++ b/.vscode/settings.json
+@@ -0,0 +1,11 @@
++{
++  "files.exclude": {
++    "**/.git": true,
++    "**/.svn": true,
++    "**/.hg": true,
++    "**/CVS": true,
++    "**/.DS_Store": true,
++    "**/Thumbs.db": true
++  },
++  "hide-files.files": []
++}
+diff --git a/index.d.ts b/index.d.ts
+index b710af7a41c55f0cd460a65dd928de33114e6e7b..2350f36ccad5d8b333c3edf688de5014efc433ec 100644
+--- a/index.d.ts
++++ b/index.d.ts
+@@ -3,13 +3,13 @@
+ 
+ /// <reference types="node" />
+ 
+-import * as NodeJSStream from 'stream';
++import * as NodeJSStream from "stream";
+ 
+-import * as logform from 'logform';
+-import * as Transport from 'winston-transport';
++import * as logform from "logform";
++import * as Transport from "winston-transport";
+ 
+-import * as Config from './lib/winston/config/index';
+-import * as Transports from './lib/winston/transports/index';
++import * as Config from "./lib/winston/config/index";
++import * as Transports from "./lib/winston/transports/index";
+ 
+ declare namespace winston {
+   // Hoisted namespaces from other modules
+@@ -53,7 +53,7 @@ declare namespace winston {
+     start?: number;
+     from?: Date;
+     until?: Date;
+-    order?: 'asc' | 'desc';
++    order?: "asc" | "desc";
+     fields: any;
+   }
+ 
+@@ -63,16 +63,20 @@ declare namespace winston {
+     done(info?: any): boolean;
+   }
+ 
+-  interface LogEntry {
+-    level: string;
++  interface LogEntry<T> {
++    level: T;
+     message: string;
+     [optionName: string]: any;
+   }
+ 
+-  interface LogMethod {
+-    (level: string, message: string, ...meta: any[]): Logger;
+-    (entry: LogEntry): Logger;
+-    (level: string, message: any): Logger;
++  interface LogMethod<T = {}> {
++    (
++      level: keyof T | (string & {}),
++      message: string,
++      ...meta: any[]
++    ): Logger<T>;
++    (entry: LogEntry<keyof T | (string & {})>): Logger<T>;
++    (level: keyof T | (string & {}), message: any): Logger<T>;
+   }
+ 
+   interface LeveledLogMethod {
+@@ -95,12 +99,15 @@ declare namespace winston {
+     rejectionHandlers?: any;
+   }
+ 
+-  class Logger extends NodeJSStream.Transform {
++  class Logger<
++    T = Config.AbstractConfigSetLevels,
++  > extends NodeJSStream.Transform {
+     constructor(options?: LoggerOptions);
+ 
+     silent: boolean;
+     format: logform.Format;
+-    levels: Config.AbstractConfigSetLevels;
++    // levels: Config.AbstractConfigSetLevels;
++    levels: T;
+     level: string;
+     transports: Transport[];
+     exceptions: ExceptionHandler;
+@@ -109,7 +116,8 @@ declare namespace winston {
+     exitOnError: Function | boolean;
+     defaultMeta?: any;
+ 
+-    log: LogMethod;
++    // log: LogMethod;
++    log: LogMethod<T>;
+     add(transport: Transport): this;
+     remove(transport: Transport): this;
+     clear(): this;
+@@ -173,7 +181,9 @@ declare namespace winston {
+   let loggers: Container;
+ 
+   let addColors: (target: Config.AbstractConfigSetColors) => any;
+-  let createLogger: (options?: LoggerOptions) => Logger;
++  let createLogger: <T extends LoggerOptions>(
++    options?: T
++  ) => Logger<T["levels"]>;
+ 
+   // Pass-through npm level methods routed to the default logger.
+   let error: LeveledLogMethod;

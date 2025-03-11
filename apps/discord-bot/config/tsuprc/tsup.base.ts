@@ -12,15 +12,15 @@ export default defineConfig({
 		// copy({
 		// 	assets: [{ from: "./package.json", to: "./package.json" }]
 		// })
-	]
-	// 	banner: ({ format }) => {
-	// 		if (format === "esm") {
-	// 			const banner = `
-	// import { createRequire } from "node:module";
-	// const require = createRequire(import.meta.url);
-	//       `;
+	],
+	banner: ({ format }) => {
+		if (format === "esm") {
+			const banner = `
+	import { createRequire } from "node:module";
+	const require = createRequire(import.meta.url);
+	      `;
 
-	// 			return { js: banner };
-	// 		}
-	// 	}
+			return { js: banner };
+		}
+	}
 });
