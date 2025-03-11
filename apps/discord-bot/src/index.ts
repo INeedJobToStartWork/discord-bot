@@ -30,7 +30,7 @@ export const client = new Client({
 const logg = logger.child({ context: "Setup" });
 
 void client.login(TOKEN).catch(() => {
-	logg.log("emergency", MyErrorList.WRONG_TOKEN);
+	logger.log("emergency", MyErrorList.WRONG_TOKEN);
 	exit(1);
 });
 
