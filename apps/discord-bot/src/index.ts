@@ -1,4 +1,4 @@
-import { Client } from "discord.js";
+import { Client, GatewayIntentBits } from "discord.js";
 import { TOKEN } from "@/utils/envVariables";
 import { logger } from "@/utils";
 import type { SlashCommandDcBuilder } from "@/utils";
@@ -25,7 +25,7 @@ const MyErrorList = {
 //--------------------------------
 
 export const client = new Client({
-	intents: []
+	intents: [GatewayIntentBits.Guilds]
 });
 const logg = logger.child({ context: "Setup" });
 

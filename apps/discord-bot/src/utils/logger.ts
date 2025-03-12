@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { addColors, config, createLogger, format, transports } from "winston";
+import { addColors, createLogger, format, transports } from "winston";
 // eslint-disable-next-line @EslintImports/no-unassigned-import
 import "winston-daily-rotate-file";
 import crypto from "node:crypto";
@@ -47,7 +47,7 @@ const logsDir = path.join(process.cwd(), "logs");
 
 export const logger = createLogger({
 	level: process.env.NODE_ENV === "production" ? "info" : "debug",
-	levels: config.syslog.levels,
+	levels: LEVELS,
 	format: format.combine(
 		format.timestamp({
 			format: "YYYY-MM-DD HH:mm:ss"

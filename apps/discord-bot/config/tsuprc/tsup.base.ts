@@ -6,7 +6,7 @@ export default defineConfig({
 	target: "esnext",
 	clean: false,
 	format: ["esm"],
-	noExternal: ["discord-api-types", "oh-my-error"],
+	noExternal: ["discord-api-types", "oh-my-error", "wilson"],
 	esbuildPlugins: [
 		typiaPlug({ tsconfig: "./tsconfig.json", cache: false })
 		// copy({

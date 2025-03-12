@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { SlashCommandDcBuilder } from "@/utils";
+import { ChannelType, MessageFlags, PermissionFlagsBits } from "discord.js";
+import { client } from "..";
 
 //----------------------
 // Functions
@@ -10,6 +13,65 @@ import { SlashCommandDcBuilder } from "@/utils";
 export const clear = new SlashCommandDcBuilder()
 	.setName("clear")
 	.setDescription("Clear chat!")
-	.setExecute(async interaction => {})
-	.addStringOption(option => option.setName("amount").setDescription("Amount messages to remove"));
+	.setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
+	// eslint-disable-next-line @typescript-eslint/no-misused-promises
+	.setExecute(async interaction => {
+		await interaction.reply({ content: "Removing...", flags: MessageFlags.Ephemeral });
+
+		if (!interaction.guild?.members.me?.permissions.has(PermissionFlagsBits.ManageMessages)) {
+			return interaction.editReply({
+				content: "",
+				embeds: [
+					{
+						color: 0xff_00_00,
+						title: "Error",
+						description: "I don't have permission to manage messages in this server!"
+					}
+				]
+			});
+		}
+
+		const amount = interaction.options.get("amount")?.value as number;
+		const channelID = `${interaction.options.get("channel")?.value ?? interaction.channelId}`;
+
+		await client.channels.fetch(channelID);
+		const channel = client.channels.cache.get(channelID);
+
+		if (!(channel && channel.isTextBased() && !channel.isDMBased())) {
+			return interaction.editReply({
+				content: "",
+				embeds: [
+					{
+						color: 0xff_00_00,
+						title: "Error",
+						description: "I can't remove messages here!"
+					}
+				]
+			});
+		}
+
+		await channel.bulkDelete(amount, true);
+		await interaction.editReply({
+			content: "",
+			embeds: [
+				{
+					color: 0x00_ff_00,
+					title: "Success",
+					description: `Successfully deleted ${amount} messages in ${channel}!`
+				}
+			]
+		});
+	})
+	.addNumberOption(option =>
+		option
+			.setName("amount")
+			.setDescription("Amount messages to remove")
+			.setRequired(true)
+			.setMinValue(2)
+			.setMaxValue(100)
+	)
+	.addChannelOption(option =>
+		option.setName("channel").setDescription("Channel to remove messages").addChannelTypes(ChannelType.GuildText)
+	);
+
 export default clear;
