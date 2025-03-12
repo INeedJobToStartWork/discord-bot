@@ -1,4 +1,5 @@
 import { SlashCommandDcBuilder } from "@/utils";
+import { MessageFlags } from "discord.js";
 
 //----------------------
 // Functions
@@ -9,7 +10,7 @@ export const ping = new SlashCommandDcBuilder()
 	.setDescription("Replies with Pong!")
 	.setExecute(async interaction => {
 		const startTime = Date.now();
-		await interaction.reply({ content: "Pinging...", ephemeral: true });
+		await interaction.reply({ content: "Pinging...", flags: MessageFlags.Ephemeral });
 
 		const pingTime = Date.now() - startTime;
 		await interaction.editReply({
