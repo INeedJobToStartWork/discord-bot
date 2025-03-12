@@ -21,7 +21,7 @@ declare global {
 //----------------------
 // Functions
 //----------------------
-
+// eslint-disable-next-line @EslintNode/no-process-env
 const envVariables = process.env;
 
 // eslint-disable-next-line no-undef

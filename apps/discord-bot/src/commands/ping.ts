@@ -4,7 +4,6 @@ import { SlashCommandDcBuilder } from "@/utils";
 // Functions
 //----------------------
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 export const ping = new SlashCommandDcBuilder()
 	.setName("ping")
 	.setDescription("Replies with Pong!")

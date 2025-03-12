@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { SlashCommandDcBuilder } from "@/utils";
 import { ChannelType, MessageFlags, PermissionFlagsBits } from "discord.js";
 import { client } from "..";
@@ -14,7 +10,6 @@ export const clear = new SlashCommandDcBuilder()
 	.setName("clear")
 	.setDescription("Clear chat!")
 	.setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
-	// eslint-disable-next-line @typescript-eslint/no-misused-promises
 	.setExecute(async interaction => {
 		await interaction.reply({ content: "Removing...", flags: MessageFlags.Ephemeral });
 
@@ -51,7 +46,7 @@ export const clear = new SlashCommandDcBuilder()
 		}
 
 		await channel.bulkDelete(amount, true);
-		await interaction.editReply({
+		return interaction.editReply({
 			content: "",
 			embeds: [
 				{

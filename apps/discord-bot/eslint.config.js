@@ -30,10 +30,11 @@ export default ineedj({
 	"@EslintSecurity/detect-object-injection",
 	"MD010/no-hard-tabs",
 	"@EslintTSDocs/syntax",
-	"@EslintNode/no-process-env",
 	"@EslintNode/no-process-exit",
 	"@EslintUnicorn/no-process-exit",
 	"@EslintNode/hashbang",
 	"@EslintPromise/always-return",
-	"@EslintUnicorn/number-literal-case"
+	"@EslintUnicorn/number-literal-case",
+	"@EslintUnicorn/consistent-destructuring",
+	"@typescript-eslint/no-misused-promises" // We don't need to wait at every promise
 );

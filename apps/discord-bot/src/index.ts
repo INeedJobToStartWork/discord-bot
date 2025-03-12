@@ -30,7 +30,7 @@ export const client = new Client({
 const logg = logger.child({ context: "Setup" });
 
 void client.login(TOKEN).catch(() => {
-	logger.log("emergency", MyErrorList.WRONG_TOKEN);
+	logg.log("emergency", MyErrorList.WRONG_TOKEN);
 	exit(1);
 });
 
@@ -50,7 +50,9 @@ void client.on("interactionCreate", interaction => {
 
 	const { commandName } = interaction;
 
-	const command = (commands as Record<string, SlashCommandDcBuilder>)[commandName] as SlashCommandDcBuilder | undefined;
+	const command = (commands as unknown as Record<string, SlashCommandDcBuilder>)[commandName] as
+		| SlashCommandDcBuilder
+		| undefined;
 	if (command) command.execute(interaction);
 	logger.info(`${command?.name} executed! User: ${interaction.user.globalName} | GuildID: ${interaction.guild?.id}`, {
 		context: "Command",

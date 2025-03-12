@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { addColors, createLogger, format, transports } from "winston";
 // eslint-disable-next-line @EslintImports/no-unassigned-import
 import "winston-daily-rotate-file";
 import crypto from "node:crypto";
 import path from "node:path";
+import { NODE_ENV } from "./envVariables";
 
 //--------------------------------
 // Log Levels
@@ -46,7 +44,7 @@ const logsDir = path.join(process.cwd(), "logs");
 //--------------------------------
 
 export const logger = createLogger({
-	level: process.env.NODE_ENV === "production" ? "info" : "debug",
+	level: NODE_ENV === "production" ? "info" : "debug",
 	levels: LEVELS,
 	format: format.combine(
 		format.timestamp({
