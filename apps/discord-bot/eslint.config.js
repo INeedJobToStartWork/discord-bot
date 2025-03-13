@@ -36,5 +36,6 @@ export default ineedj({
 	"@EslintPromise/always-return",
 	"@EslintUnicorn/number-literal-case",
 	"@EslintUnicorn/consistent-destructuring",
-	"@typescript-eslint/no-misused-promises" // We don't need to wait at every promise
+	"@typescript-eslint/no-misused-promises", // We don't need to wait at every promise
+	"class-methods-use-this"
 );

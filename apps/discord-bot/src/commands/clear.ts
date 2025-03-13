@@ -9,23 +9,10 @@ import { client } from "..";
 export const clear = new SlashCommandDcBuilder()
 	.setName("clear")
 	.setDescription("Clear chat!")
+	.setRequiredPermissions([PermissionFlagsBits.ManageMessages])
 	.setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
 	.setExecute(async interaction => {
 		await interaction.reply({ content: "Removing...", flags: MessageFlags.Ephemeral });
-
-		if (!interaction.guild?.members.me?.permissions.has(PermissionFlagsBits.ManageMessages)) {
-			return interaction.editReply({
-				content: "",
-				embeds: [
-					{
-						color: 0xff_00_00,
-						title: "Error",
-						description: "I don't have permission to manage messages in this server!"
-					}
-				]
-			});
-		}
-
 		const amount = interaction.options.get("amount")?.value as number;
 		const channelID = `${interaction.options.get("channel")?.value ?? interaction.channelId}`;
 
