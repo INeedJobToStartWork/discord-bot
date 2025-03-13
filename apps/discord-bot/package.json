@@ -25,8 +25,8 @@
 		"------------------------DEPLOYS------------------------": "",
 		"commands:dev": "node lib/scripts/registerCommands.js",
 		"commands:prod": "node dist/scripts/registerCommands.js",
-		"start:prod": "set NODE_ENV=production && node dist/index.js",
-		"start:dev": "set NODE_ENV=development && node lib/index.js",
+		"start:prod": "set NODE_ENV=production && nodemon --watch dist ./dist/index.js",
+		"start:dev": "set NODE_ENV=development && nodemon --watch lib ./lib/index.js",
 		"------------------------TESTS------------------------": "",
 		"test": "echo \"Error: no test specified\""
 	},
@@ -56,6 +56,7 @@
 		"esbuild-plugin-copy": "^2.1.1",
 		"eslint": "^8.57.1",
 		"lint-staged": "^15.4.3",
+		"nodemon": "^3.1.9",
 		"prettier": "^3.5.3",
 		"ts-patch": "^3.3.0",
 		"tsup": "^8.4.0",
