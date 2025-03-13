@@ -53,6 +53,7 @@ void client.on("interactionCreate", interaction => {
 	const command = (commands as unknown as Record<string, SlashCommandDcBuilder>)[commandName] as
 		| SlashCommandDcBuilder
 		| undefined;
+
 	if (command) command.execute(interaction);
 	logger.info(`${command?.name} executed! User: ${interaction.user.globalName} | GuildID: ${interaction.guild?.id}`, {
 		context: "Command",

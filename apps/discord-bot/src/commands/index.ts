@@ -1,2 +1,3 @@
-export * from "./ping";
 export * from "./clear";
+export * from "./eightBall";
+export * from "./ping";
