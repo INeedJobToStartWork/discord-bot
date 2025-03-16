@@ -1,5 +1,4 @@
 import { SlashCommandDcBuilder } from "@/utils";
-import translates from "@/utils/translation";
 import { PermissionFlagsBits } from "discord.js";
 
 //----------------------
@@ -9,11 +8,6 @@ import { PermissionFlagsBits } from "discord.js";
 export const eightball = new SlashCommandDcBuilder()
 	.setName("eightball")
 	.setDescription("Magic 8Ball game!")
-	.setDescriptionLocalizations(
-		translates("DescriptionLocalizations", {
-			ns: "eightBall"
-		})
-	)
 	.setRequiredPermissions([PermissionFlagsBits.SendMessages])
 	.setExecute(async interaction => {
 		const question = interaction.options.get("question")?.value as string;
@@ -77,16 +71,6 @@ export const eightball = new SlashCommandDcBuilder()
 		option
 			.setName("question")
 			.setDescription("Ask 8ball about future!")
-			.setNameLocalizations(
-				translates("options.question.NameLocalizations", {
-					ns: "eightBall"
-				})
-			)
-			.setDescriptionLocalizations(
-				translates("options.question.DescriptionLocalizations", {
-					ns: "eightBall"
-				})
-			)
 			.setRequired(true)
 			.setMinLength(3)
 			.setMaxLength(120)
