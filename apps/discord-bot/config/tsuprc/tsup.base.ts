@@ -4,15 +4,10 @@ import typiaPlug from "@ryoppippi/unplugin-typia/esbuild";
 export default defineConfig({
 	entry: ["src/index.ts", "src/scripts/registerCommands.ts"],
 	target: "esnext",
-	clean: false,
+	clean: true,
 	format: ["esm"],
 	noExternal: ["discord-api-types", "oh-my-error", "wilson"],
-	esbuildPlugins: [
-		typiaPlug({ tsconfig: "./tsconfig.json", cache: false })
-		// copy({
-		// 	assets: [{ from: "./package.json", to: "./package.json" }]
-		// })
-	],
+	esbuildPlugins: [typiaPlug({ tsconfig: "./tsconfig.json", cache: false })],
 	banner: ({ format }) => {
 		if (format === "esm") {
 			const banner = `

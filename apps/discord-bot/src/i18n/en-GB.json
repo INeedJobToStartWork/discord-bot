@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Magic 8Ball game!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"It is certain.\",\n\t\t\t\t\"It is decidedly so.\",\n\t\t\t\t\"Without a doubt.\",\n\t\t\t\t\"Yes - definitely.\",\n\t\t\t\t\"You may rely on it.\",\n\t\t\t\t\"As I see it, yes.\",\n\t\t\t\t\"Most likely.\",\n\t\t\t\t\"Outlook good.\",\n\t\t\t\t\"Yes.\",\n\t\t\t\t\"Signs point to yes.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Reply hazy, try again.\",\n\t\t\t\t\"Ask again later.\",\n\t\t\t\t\"Better not tell you now.\",\n\t\t\t\t\"Cannot predict now.\",\n\t\t\t\t\"Concentrate and ask again.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Don't count on it.\",\n\t\t\t\t\"My reply is no.\",\n\t\t\t\t\"My sources say no.\",\n\t\t\t\t\"Outlook not so good.\",\n\t\t\t\t\"Very doubtful.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Ask 8ball about the future!",
+        "NameLocalizations": "question"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Replies with Pong!",
+    "execute": {
+      "output": {
+        "description": "Latency: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping command"
+        }
+      }
+    }
+  }
+}

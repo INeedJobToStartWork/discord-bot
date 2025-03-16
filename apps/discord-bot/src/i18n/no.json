@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Magisk 8Ball-spill!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Det er sikkert.\",\n\t\t\t\t\"Det er helt sikkert.\",\n\t\t\t\t\"Uten tvil.\",\n\t\t\t\t\"Ja - definitivt.\",\n\t\t\t\t\"Du kan stole på det.\",\n\t\t\t\t\"Som jeg ser det, ja.\",\n\t\t\t\t\"Sannsynligvis.\",\n\t\t\t\t\"Utsiktene er gode.\",\n\t\t\t\t\"Ja.\",\n\t\t\t\t\"Tegnene peker mot ja.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Svar uklart, prøv igjen.\",\n\t\t\t\t\"Spør igjen senere.\",\n\t\t\t\t\"Bedre å ikke si det nå.\",\n\t\t\t\t\"Kan ikke forutsi nå.\",\n\t\t\t\t\"Konsentrer deg og spør igjen.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Ikke regn med det.\",\n\t\t\t\t\"Mitt svar er nei.\",\n\t\t\t\t\"Mine kilder sier nei.\",\n\t\t\t\t\"Utsiktene er ikke så gode.\",\n\t\t\t\t\"Svært tvilsomt.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Spør 8ball om fremtiden!",
+        "NameLocalizations": "spørsmål"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Svar med Pong!",
+    "execute": {
+      "output": {
+        "description": "Forsinkelse: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping-kommando"
+        }
+      }
+    }
+  }
+}

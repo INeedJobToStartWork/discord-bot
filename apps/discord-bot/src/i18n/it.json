@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Gioco della Magic 8Ball!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"È certo.\",\n\t\t\t\t\"Decisamente sì.\",\n\t\t\t\t\"Senza dubbio.\",\n\t\t\t\t\"Sì - decisamente.\",\n\t\t\t\t\"Puoi contarci.\",\n\t\t\t\t\"Per come la vedo io, sì.\",\n\t\t\t\t\"Molto probabilmente.\",\n\t\t\t\t\"Le prospettive sono buone.\",\n\t\t\t\t\"Sì.\",\n\t\t\t\t\"I segni indicano di sì.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Risposta vaga, riprova.\",\n\t\t\t\t\"Chiedi di nuovo più tardi.\",\n\t\t\t\t\"Meglio non dirtelo ora.\",\n\t\t\t\t\"Non posso prevederlo ora.\",\n\t\t\t\t\"Concentrati e chiedi di nuovo.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Non contarci.\",\n\t\t\t\t\"La mia risposta è no.\",\n\t\t\t\t\"Le mie fonti dicono di no.\",\n\t\t\t\t\"Le prospettive non sono buone.\",\n\t\t\t\t\"Molto improbabile.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Chiedi alla 8ball del futuro!",
+        "NameLocalizations": "domanda"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Risponde con Pong!",
+    "execute": {
+      "output": {
+        "description": "Latenza: {{pingTime}}ms",
+        "footer": {
+          "text": "Comando ping"
+        }
+      }
+    }
+  }
+}

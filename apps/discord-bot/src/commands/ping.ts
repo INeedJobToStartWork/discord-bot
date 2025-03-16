@@ -1,5 +1,7 @@
 import { SlashCommandDcBuilder } from "@/utils";
+import { translates } from "@/utils/translation";
 import { MessageFlags } from "discord.js";
+import { t } from "i18next";
 
 //----------------------
 // Functions
@@ -8,6 +10,11 @@ import { MessageFlags } from "discord.js";
 export const ping = new SlashCommandDcBuilder()
 	.setName("ping")
 	.setDescription("Replies with Pong!")
+	.setDescriptionLocalizations(
+		translates("ping:DescriptionLocalizations", {
+			ns: "ping"
+		})
+	)
 	.setExecute(async interaction => {
 		const startTime = Date.now();
 		await interaction.reply({ content: "Pinging...", flags: MessageFlags.Ephemeral });
@@ -18,11 +25,15 @@ export const ping = new SlashCommandDcBuilder()
 			embeds: [
 				{
 					title: "Pong! 🏓",
-					description: `Latency: ${pingTime}ms`,
+					description: t("execute.output.description", {
+						ns: "ping",
+						lng: interaction.locale,
+						pingTime
+					}),
 					color: 0x00_ff_00,
 					timestamp: new Date().toISOString(),
 					footer: {
-						text: "Ping command"
+						text: t("execute.output.footer.text", { ns: "ping", lng: interaction.locale })
 					}
 				}
 			]

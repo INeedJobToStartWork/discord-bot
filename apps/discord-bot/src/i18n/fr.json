@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Jeu de boule magique 8!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"C'est certain.\",\n\t\t\t\t\"C'est décidément ainsi.\",\n\t\t\t\t\"Sans aucun doute.\",\n\t\t\t\t\"Oui - définitivement.\",\n\t\t\t\t\"Vous pouvez compter dessus.\",\n\t\t\t\t\"À mon avis, oui.\",\n\t\t\t\t\"Très probable.\",\n\t\t\t\t\"Les perspectives sont bonnes.\",\n\t\t\t\t\"Oui.\",\n\t\t\t\t\"Les signes indiquent oui.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Réponse floue, réessayez.\",\n\t\t\t\t\"Demandez plus tard.\",\n\t\t\t\t\"Mieux vaut ne pas vous le dire maintenant.\",\n\t\t\t\t\"Impossible de prédire maintenant.\",\n\t\t\t\t\"Concentrez-vous et demandez à nouveau.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"N'y comptez pas.\",\n\t\t\t\t\"Ma réponse est non.\",\n\t\t\t\t\"Mes sources disent non.\",\n\t\t\t\t\"Les perspectives ne sont pas si bonnes.\",\n\t\t\t\t\"Très douteux.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Demandez à la boule 8 sur l'avenir !",
+        "NameLocalizations": "question"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Répond avec Pong !",
+    "execute": {
+      "output": {
+        "description": "Latence : {{pingTime}}ms",
+        "footer": {
+          "text": "Commande Ping"
+        }
+      }
+    }
+  }
+}

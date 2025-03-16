@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Jocul Magic 8Ball!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Este sigur.\",\n\t\t\t\t\"Cu siguranță este așa.\",\n\t\t\t\t\"Fără îndoială.\",\n\t\t\t\t\"Da - cu siguranță.\",\n\t\t\t\t\"Te poți baza pe asta.\",\n\t\t\t\t\"Așa cum văd eu, da.\",\n\t\t\t\t\"Cel mai probabil.\",\n\t\t\t\t\"Perspective bune.\",\n\t\t\t\t\"Da.\",\n\t\t\t\t\"Semnele indică da.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Răspuns neclar, încearcă din nou.\",\n\t\t\t\t\"Întreabă din nou mai târziu.\",\n\t\t\t\t\"Mai bine să nu-ți spun acum.\",\n\t\t\t\t\"Nu pot prezice acum.\",\n\t\t\t\t\"Concentrează-te și întreabă din nou.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Nu te baza pe asta.\",\n\t\t\t\t\"Răspunsul meu este nu.\",\n\t\t\t\t\"Sursele mele spun nu.\",\n\t\t\t\t\"Perspectivele nu sunt prea bune.\",\n\t\t\t\t\"Foarte îndoielnic.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Întreabă 8ball despre viitor!",
+        "NameLocalizations": "întrebare"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Răspunde cu Pong!",
+    "execute": {
+      "output": {
+        "description": "Latenta: {{pingTime}}ms",
+        "footer": {
+          "text": "Comanda Ping"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Permainan Magic 8Ball!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Pasti.\",\n\t\t\t\t\"Sudah pasti.\",\n\t\t\t\t\"Tanpa ragu.\",\n\t\t\t\t\"Ya - pasti.\",\n\t\t\t\t\"Anda bisa mengandalkannya.\",\n\t\t\t\t\"Menurut saya, ya.\",\n\t\t\t\t\"Kemungkinan besar.\",\n\t\t\t\t\"Prospeknya bagus.\",\n\t\t\t\t\"Ya.\",\n\t\t\t\t\"Tanda-tanda mengarah ke ya.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Jawaban tidak jelas, coba lagi.\",\n\t\t\t\t\"Tanya lagi nanti.\",\n\t\t\t\t\"Lebih baik tidak memberitahu Anda sekarang.\",\n\t\t\t\t\"Tidak bisa memprediksi sekarang.\",\n\t\t\t\t\"Konsentrasi dan tanya lagi.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Jangan mengandalkannya.\",\n\t\t\t\t\"Jawaban saya tidak.\",\n\t\t\t\t\"Sumber saya mengatakan tidak.\",\n\t\t\t\t\"Prospeknya tidak begitu bagus.\",\n\t\t\t\t\"Sangat diragukan.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Tanya 8ball tentang masa depan!",
+        "NameLocalizations": "pertanyaan"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Membalas dengan Pong!",
+    "execute": {
+      "output": {
+        "description": "Latensi: {{pingTime}}ms",
+        "footer": {
+          "text": "Perintah ping"
+        }
+      }
+    }
+  }
+}

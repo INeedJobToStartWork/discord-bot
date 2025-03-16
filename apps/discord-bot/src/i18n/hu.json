@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Varázslatos 8Ball játék!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Biztosan így van.\",\n\t\t\t\t\"Határozottan így van.\",\n\t\t\t\t\"Kétség nélkül.\",\n\t\t\t\t\"Igen - határozottan.\",\n\t\t\t\t\"Számíthatsz rá.\",\n\t\t\t\t\"Ahogy látom, igen.\",\n\t\t\t\t\"Valószínűleg.\",\n\t\t\t\t\"Jó kilátások.\",\n\t\t\t\t\"Igen.\",\n\t\t\t\t\"A jelek szerint igen.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"A válasz homályos, próbáld újra.\",\n\t\t\t\t\"Kérdezd meg később.\",\n\t\t\t\t\"Jobb, ha most nem mondom el.\",\n\t\t\t\t\"Most nem tudom megjósolni.\",\n\t\t\t\t\"Koncentrálj és kérdezd újra.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Ne számíts rá.\",\n\t\t\t\t\"A válaszom nem.\",\n\t\t\t\t\"Forrásaim szerint nem.\",\n\t\t\t\t\"A kilátások nem túl jók.\",\n\t\t\t\t\"Nagyon kétséges.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Kérdezd meg a 8ball-t a jövőről!",
+        "NameLocalizations": "kérdés"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Válasz: Pong!",
+    "execute": {
+      "output": {
+        "description": "Késleltetés: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping parancs"
+        }
+      }
+    }
+  }
+}

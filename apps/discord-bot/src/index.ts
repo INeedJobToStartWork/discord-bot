@@ -54,7 +54,7 @@ void client.on("interactionCreate", interaction => {
 		| SlashCommandDcBuilder
 		| undefined;
 
-	if (command) command.execute(interaction);
+	if (command?.execute) command.execute(interaction);
 	logger.info(`${command?.name} executed! User: ${interaction.user.globalName} | GuildID: ${interaction.guild?.id}`, {
 		context: "Command",
 		details: interaction

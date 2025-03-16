@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Igra Magic 8Ball!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Sigurno je.\",\n\t\t\t\t\"Definitivno je tako.\",\n\t\t\t\t\"Bez sumnje.\",\n\t\t\t\t\"Da - definitivno.\",\n\t\t\t\t\"Možeš se osloniti na to.\",\n\t\t\t\t\"Kako ja vidim, da.\",\n\t\t\t\t\"Najvjerojatnije.\",\n\t\t\t\t\"Izgleda dobro.\",\n\t\t\t\t\"Da.\",\n\t\t\t\t\"Znakovi upućuju na da.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Odgovor je nejasan, pokušaj ponovno.\",\n\t\t\t\t\"Pitaj ponovno kasnije.\",\n\t\t\t\t\"Bolje da ti sada ne kažem.\",\n\t\t\t\t\"Ne mogu sada predvidjeti.\",\n\t\t\t\t\"Koncentriraj se i pitaj ponovno.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Ne računaj na to.\",\n\t\t\t\t\"Moj odgovor je ne.\",\n\t\t\t\t\"Moji izvori kažu ne.\",\n\t\t\t\t\"Izgledi nisu tako dobri.\",\n\t\t\t\t\"Vrlo sumnjivo.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Pitaj 8ball o budućnosti!",
+        "NameLocalizations": "pitanje"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Odgovara s Pong!",
+    "execute": {
+      "output": {
+        "description": "Latencija: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping naredba"
+        }
+      }
+    }
+  }
+}

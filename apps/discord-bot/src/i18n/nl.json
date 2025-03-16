@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Magische 8Ball spel!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Het is zeker.\",\n\t\t\t\t\"Het is beslist zo.\",\n\t\t\t\t\"Zonder twijfel.\",\n\t\t\t\t\"Ja - absoluut.\",\n\t\t\t\t\"Je kunt erop rekenen.\",\n\t\t\t\t\"Zoals ik het zie, ja.\",\n\t\t\t\t\"Zeer waarschijnlijk.\",\n\t\t\t\t\"Vooruitzichten goed.\",\n\t\t\t\t\"Ja.\",\n\t\t\t\t\"Tekenen wijzen op ja.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Antwoord wazig, probeer opnieuw.\",\n\t\t\t\t\"Vraag later opnieuw.\",\n\t\t\t\t\"Beter nu niet vertellen.\",\n\t\t\t\t\"Kan nu niet voorspellen.\",\n\t\t\t\t\"Concentreer en vraag opnieuw.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Reken er niet op.\",\n\t\t\t\t\"Mijn antwoord is nee.\",\n\t\t\t\t\"Mijn bronnen zeggen nee.\",\n\t\t\t\t\"Vooruitzichten niet zo goed.\",\n\t\t\t\t\"Zeer twijfelachtig.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Vraag 8ball over de toekomst!",
+        "NameLocalizations": "vraag"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Antwoordt met Pong!",
+    "execute": {
+      "output": {
+        "description": "Latentie: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping-opdracht"
+        }
+      }
+    }
+  }
+}
