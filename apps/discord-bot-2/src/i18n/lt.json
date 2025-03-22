@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Magijos 8Ball žaidimas!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Tai tikra.\",\n\t\t\t\t\"Tai neabejotina.\",\n\t\t\t\t\"Be jokios abejonės.\",\n\t\t\t\t\"Taip - tikrai.\",\n\t\t\t\t\"Galite tuo pasikliauti.\",\n\t\t\t\t\"Kaip matau, taip.\",\n\t\t\t\t\"Labiausiai tikėtina.\",\n\t\t\t\t\"Perspektyva gera.\",\n\t\t\t\t\"Taip.\",\n\t\t\t\t\"Ženklai rodo taip.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Atsakymas neaiškus, bandykite dar kartą.\",\n\t\t\t\t\"Paklauskite vėliau.\",\n\t\t\t\t\"Geriau dabar nesakyti.\",\n\t\t\t\t\"Dabar negaliu prognozuoti.\",\n\t\t\t\t\"Susikoncentruokite ir paklauskite dar kartą.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Nesitikėkite to.\",\n\t\t\t\t\"Mano atsakymas yra ne.\",\n\t\t\t\t\"Mano šaltiniai sako ne.\",\n\t\t\t\t\"Perspektyva nėra tokia gera.\",\n\t\t\t\t\"Labai abejotina.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Paklausk 8ball apie ateitį!",
+        "NameLocalizations": "klausimas"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Atsako su Pong!",
+    "execute": {
+      "output": {
+        "description": "Vėlavimas: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping komanda"
+        }
+      }
+    }
+  }
+}

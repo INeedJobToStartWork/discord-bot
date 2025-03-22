@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Taikapallo 8 -peli!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Se on varmaa.\",\n\t\t\t\t\"Ehdottomasti niin.\",\n\t\t\t\t\"Ilman epäilystäkään.\",\n\t\t\t\t\"Kyllä - ehdottomasti.\",\n\t\t\t\t\"Voit luottaa siihen.\",\n\t\t\t\t\"Kuten näen, kyllä.\",\n\t\t\t\t\"Todennäköisesti.\",\n\t\t\t\t\"Näkymät hyvät.\",\n\t\t\t\t\"Kyllä.\",\n\t\t\t\t\"Merkit viittaavat kyllä.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Vastaus epäselvä, yritä uudelleen.\",\n\t\t\t\t\"Kysy uudelleen myöhemmin.\",\n\t\t\t\t\"Parempi olla kertomatta nyt.\",\n\t\t\t\t\"En voi ennustaa nyt.\",\n\t\t\t\t\"Keskity ja kysy uudelleen.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Älä laske sen varaan.\",\n\t\t\t\t\"Vastaukseni on ei.\",\n\t\t\t\t\"Lähteeni sanovat ei.\",\n\t\t\t\t\"Näkymät eivät ole hyvät.\",\n\t\t\t\t\"Hyvin epätodennäköistä.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Kysy 8ballilta tulevaisuudesta!",
+        "NameLocalizations": "kysymys"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Vastaa Pong!",
+    "execute": {
+      "output": {
+        "description": "Viive: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping-komento"
+        }
+      }
+    }
+  }
+}

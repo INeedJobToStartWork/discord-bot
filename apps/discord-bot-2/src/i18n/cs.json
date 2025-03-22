@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Hra Kouzelná 8Ball!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Je to jisté.\",\n\t\t\t\t\"Rozhodně ano.\",\n\t\t\t\t\"Bez pochyb.\",\n\t\t\t\t\"Ano - rozhodně.\",\n\t\t\t\t\"Můžeš se na to spolehnout.\",\n\t\t\t\t\"Jak to vidím, ano.\",\n\t\t\t\t\"Pravděpodobně.\",\n\t\t\t\t\"Vyhlídky jsou dobré.\",\n\t\t\t\t\"Ano.\",\n\t\t\t\t\"Známky ukazují na ano.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Odpověď je nejasná, zkus to znovu.\",\n\t\t\t\t\"Zeptej se později.\",\n\t\t\t\t\"Raději ti to teď neřeknu.\",\n\t\t\t\t\"Teď nelze předpovědět.\",\n\t\t\t\t\"Soustřeď se a zeptej se znovu.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Nespoléhej na to.\",\n\t\t\t\t\"Moje odpověď je ne.\",\n\t\t\t\t\"Moje zdroje říkají ne.\",\n\t\t\t\t\"Vyhlídky nejsou tak dobré.\",\n\t\t\t\t\"Velmi nepravděpodobné.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Zeptejte se 8ball na budoucnost!",
+        "NameLocalizations": "otázka"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Odpoví s Pong!",
+    "execute": {
+      "output": {
+        "description": "Latence: {{pingTime}}ms",
+        "footer": {
+          "text": "Příkaz ping"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Sihirli 8Top oyunu!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Kesinlikle öyle.\",\n\t\t\t\t\"Kesinlikle öyle.\",\n\t\t\t\t\"Şüphesiz.\",\n\t\t\t\t\"Evet - kesinlikle.\",\n\t\t\t\t\"Güvenebilirsiniz.\",\n\t\t\t\t\"Bana göre, evet.\",\n\t\t\t\t\"Büyük olasılıkla.\",\n\t\t\t\t\"Görünüm iyi.\",\n\t\t\t\t\"Evet.\",\n\t\t\t\t\"İşaretler eveti gösteriyor.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Yanıt belirsiz, tekrar deneyin.\",\n\t\t\t\t\"Daha sonra tekrar sorun.\",\n\t\t\t\t\"Şimdi söylemesem daha iyi.\",\n\t\t\t\t\"Şu anda tahmin edemem.\",\n\t\t\t\t\"Odaklanın ve tekrar sorun.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Buna güvenmeyin.\",\n\t\t\t\t\"Cevabım hayır.\",\n\t\t\t\t\"Kaynaklarım hayır diyor.\",\n\t\t\t\t\"Görünüm pek iyi değil.\",\n\t\t\t\t\"Çok şüpheli.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "8ball'a geleceği sor!",
+        "NameLocalizations": "soru"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Pong ile yanıtlar!",
+    "execute": {
+      "output": {
+        "description": "Gecikme: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping komutu"
+        }
+      }
+    }
+  }
+}

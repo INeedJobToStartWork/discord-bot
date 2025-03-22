@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Trò chơi Magic 8Ball!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Chắc chắn rồi.\",\n\t\t\t\t\"Chắc chắn là vậy.\",\n\t\t\t\t\"Không còn nghi ngờ gì nữa.\",\n\t\t\t\t\"Vâng - chắc chắn rồi.\",\n\t\t\t\t\"Bạn có thể tin tưởng vào điều đó.\",\n\t\t\t\t\"Theo tôi thấy, vâng.\",\n\t\t\t\t\"Có khả năng nhất.\",\n\t\t\t\t\"Triển vọng tốt.\",\n\t\t\t\t\"Vâng.\",\n\t\t\t\t\"Dấu hiệu chỉ ra là có.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Trả lời mơ hồ, thử lại.\",\n\t\t\t\t\"Hỏi lại sau.\",\n\t\t\t\t\"Tốt hơn là không nói cho bạn bây giờ.\",\n\t\t\t\t\"Không thể dự đoán bây giờ.\",\n\t\t\t\t\"Tập trung và hỏi lại.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Đừng trông chờ vào điều đó.\",\n\t\t\t\t\"Câu trả lời của tôi là không.\",\n\t\t\t\t\"Nguồn tin của tôi nói không.\",\n\t\t\t\t\"Triển vọng không tốt lắm.\",\n\t\t\t\t\"Rất nghi ngờ.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Hỏi 8ball về tương lai!",
+        "NameLocalizations": "câu_hỏi"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Trả lời với Pong!",
+    "execute": {
+      "output": {
+        "description": "Độ trễ: {{pingTime}}ms",
+        "footer": {
+          "text": "Lệnh ping"
+        }
+      }
+    }
+  }
+}

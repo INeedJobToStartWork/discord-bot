@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Magisches 8-Ball-Spiel!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Es ist sicher.\",\n\t\t\t\t\"Es ist entschieden so.\",\n\t\t\t\t\"Ohne Zweifel.\",\n\t\t\t\t\"Ja - definitiv.\",\n\t\t\t\t\"Du kannst dich darauf verlassen.\",\n\t\t\t\t\"So wie ich es sehe, ja.\",\n\t\t\t\t\"Höchstwahrscheinlich.\",\n\t\t\t\t\"Aussichten gut.\",\n\t\t\t\t\"Ja.\",\n\t\t\t\t\"Anzeichen deuten auf ja.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Antwort unklar, versuche es erneut.\",\n\t\t\t\t\"Frage später noch einmal.\",\n\t\t\t\t\"Besser, ich sage es dir jetzt nicht.\",\n\t\t\t\t\"Kann jetzt nicht vorhersagen.\",\n\t\t\t\t\"Konzentriere dich und frage erneut.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Verlass dich nicht darauf.\",\n\t\t\t\t\"Meine Antwort ist nein.\",\n\t\t\t\t\"Meine Quellen sagen nein.\",\n\t\t\t\t\"Aussichten nicht so gut.\",\n\t\t\t\t\"Sehr zweifelhaft.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Frage die 8ball nach der Zukunft!",
+        "NameLocalizations": "frage"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Antwortet mit Pong!",
+    "execute": {
+      "output": {
+        "description": "Latenz: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping-Befehl"
+        }
+      }
+    }
+  }
+}

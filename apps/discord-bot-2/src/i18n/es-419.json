@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "¡Juego de la Bola 8 Mágica!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Es seguro.\",\n\t\t\t\t\"Definitivamente sí.\",\n\t\t\t\t\"Sin duda.\",\n\t\t\t\t\"Sí, definitivamente.\",\n\t\t\t\t\"Puedes confiar en ello.\",\n\t\t\t\t\"Según lo veo, sí.\",\n\t\t\t\t\"Lo más probable.\",\n\t\t\t\t\"Perspectiva buena.\",\n\t\t\t\t\"Sí.\",\n\t\t\t\t\"Las señales apuntan a que sí.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Respuesta confusa, intenta de nuevo.\",\n\t\t\t\t\"Pregunta de nuevo más tarde.\",\n\t\t\t\t\"Mejor no te lo digo ahora.\",\n\t\t\t\t\"No puedo predecir ahora.\",\n\t\t\t\t\"Concéntrate y pregunta de nuevo.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"No cuentes con ello.\",\n\t\t\t\t\"Mi respuesta es no.\",\n\t\t\t\t\"Mis fuentes dicen que no.\",\n\t\t\t\t\"Perspectiva no tan buena.\",\n\t\t\t\t\"Muy dudoso.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "¡Pregunta a la bola 8 sobre el futuro!",
+        "NameLocalizations": "pregunta"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "¡Responde con Pong!",
+    "execute": {
+      "output": {
+        "description": "Latencia: {{pingTime}}ms",
+        "footer": {
+          "text": "Comando ping"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Magiska 8Ball-spelet!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"Det är säkert.\",\n\t\t\t\t\"Det är definitivt så.\",\n\t\t\t\t\"Utan tvekan.\",\n\t\t\t\t\"Ja - definitivt.\",\n\t\t\t\t\"Du kan lita på det.\",\n\t\t\t\t\"Som jag ser det, ja.\",\n\t\t\t\t\"Troligtvis.\",\n\t\t\t\t\"Utsikterna är goda.\",\n\t\t\t\t\"Ja.\",\n\t\t\t\t\"Tecknen pekar på ja.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Svaret är oklart, försök igen.\",\n\t\t\t\t\"Fråga igen senare.\",\n\t\t\t\t\"Bättre att inte säga nu.\",\n\t\t\t\t\"Kan inte förutsäga nu.\",\n\t\t\t\t\"Koncentrera dig och fråga igen.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Räkna inte med det.\",\n\t\t\t\t\"Mitt svar är nej.\",\n\t\t\t\t\"Mina källor säger nej.\",\n\t\t\t\t\"Utsikterna är inte så goda.\",\n\t\t\t\t\"Mycket tveksamt.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Fråga 8ball om framtiden!",
+        "NameLocalizations": "fråga"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Svarar med Pong!",
+    "execute": {
+      "output": {
+        "description": "Latens: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping-kommando"
+        }
+      }
+    }
+  }
+}

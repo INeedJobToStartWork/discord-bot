@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Magic 8Ball 游戏！",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"肯定的。\",\n\t\t\t\t\"绝对如此。\",\n\t\t\t\t\"毫无疑问。\",\n\t\t\t\t\"是的 - 绝对的。\",\n\t\t\t\t\"你可以依赖它。\",\n\t\t\t\t\"在我看来，是的。\",\n\t\t\t\t\"很有可能。\",\n\t\t\t\t\"前景良好。\",\n\t\t\t\t\"是的。\",\n\t\t\t\t\"迹象表明是的。\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"回复模糊，请再试一次。\",\n\t\t\t\t\"稍后再问。\",\n\t\t\t\t\"现在最好不告诉你。\",\n\t\t\t\t\"现在无法预测。\",\n\t\t\t\t\"集中注意力再问一次。\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"不要指望它。\",\n\t\t\t\t\"我的回答是不。\",\n\t\t\t\t\"我的消息来源说不。\",\n\t\t\t\t\"前景不太好。\",\n\t\t\t\t\"非常怀疑。\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "询问 8ball 关于未来！",
+        "NameLocalizations": "问题"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "回复 Pong!",
+    "execute": {
+      "output": {
+        "description": "延迟：{{pingTime}}ms",
+        "footer": {
+          "text": "Ping 命令"
+        }
+      }
+    }
+  }
+}

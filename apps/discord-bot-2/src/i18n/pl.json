@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "Gra Magiczna Kula 8!",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"To pewne.\",\n\t\t\t\t\"Zdecydowanie tak.\",\n\t\t\t\t\"Bez wątpienia.\",\n\t\t\t\t\"Tak - zdecydowanie.\",\n\t\t\t\t\"Możesz na to liczyć.\",\n\t\t\t\t\"Jak widzę, tak.\",\n\t\t\t\t\"Najprawdopodobniej.\",\n\t\t\t\t\"Perspektywy są dobre.\",\n\t\t\t\t\"Tak.\",\n\t\t\t\t\"Wszystko wskazuje na tak.\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"Odpowiedź niejasna, spróbuj ponownie.\",\n\t\t\t\t\"Zapytaj ponownie później.\",\n\t\t\t\t\"Lepiej nie mówić teraz.\",\n\t\t\t\t\"Nie mogę teraz przewidzieć.\",\n\t\t\t\t\"Skoncentruj się i zapytaj ponownie.\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"Nie licz na to.\",\n\t\t\t\t\"Moja odpowiedź brzmi nie.\",\n\t\t\t\t\"Moje źródła mówią nie.\",\n\t\t\t\t\"Perspektywy nie są zbyt dobre.\",\n\t\t\t\t\"Bardzo wątpliwe.\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "Zapytaj 8ball o przyszłość!",
+        "NameLocalizations": "pytanie"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Odpowiada Pong!",
+    "execute": {
+      "output": {
+        "description": "Opóźnienie: {{pingTime}}ms",
+        "footer": {
+          "text": "Polecenie ping"
+        }
+      }
+    }
+  }
+}

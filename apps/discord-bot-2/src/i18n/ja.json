@@ -1,0 +1,25 @@
+{
+  "eightBall": {
+    "DescriptionLocalizations": "マジック 8Ball ゲーム！",
+    "execute": {
+      "responses": "{\n\t\t\tpositive: [\n\t\t\t\t\"それは確かです。\",\n\t\t\t\t\"それは間違いありません。\",\n\t\t\t\t\"疑いの余地はありません。\",\n\t\t\t\t\"はい - 間違いなく。\",\n\t\t\t\t\"それに頼ってもいいです。\",\n\t\t\t\t\"私の見たところ、はい。\",\n\t\t\t\t\"おそらくそうでしょう。\",\n\t\t\t\t\"見通しは良好です。\",\n\t\t\t\t\"はい。\",\n\t\t\t\t\"兆候ははいを指しています。\"\n\t\t\t],\n\t\t\tneutral: [\n\t\t\t\t\"返事が曖昧です、もう一度試してください。\",\n\t\t\t\t\"後でもう一度聞いてください。\",\n\t\t\t\t\"今は言わない方がいいです。\",\n\t\t\t\t\"今は予測できません。\",\n\t\t\t\t\"集中してもう一度聞いてください。\"\n\t\t\t],\n\t\t\tnegative: [\n\t\t\t\t\"それに頼らないでください。\",\n\t\t\t\t\"私の返事はノーです。\",\n\t\t\t\t\"私の情報源はノーと言っています。\",\n\t\t\t\t\"見通しはあまり良くありません。\",\n\t\t\t\t\"非常に疑わしいです。\"\n\t\t\t]\n\t\t}"
+    },
+    "options": {
+      "question": {
+        "DescriptionLocalizations": "8ball に未来について尋ねる！",
+        "NameLocalizations": "質問"
+      }
+    }
+  },
+  "ping": {
+    "DescriptionLocalizations": "Pong! と返信します",
+    "execute": {
+      "output": {
+        "description": "レイテンシ: {{pingTime}}ms",
+        "footer": {
+          "text": "Ping コマンド"
+        }
+      }
+    }
+  }
+}
